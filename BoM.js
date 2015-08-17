@@ -27,7 +27,7 @@ var xml=x.responseXML;
 function showVerses (currentChapter) {
 	//This sets the access level.
 	var path="/root/book/chapter[" + currentChapter + "]/verse";
-
+	console.log("Path=" + path);
 	var nodes=xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
 	var result=nodes.iterateNext();
 
